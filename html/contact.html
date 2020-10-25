@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../blog.css">
+  <link rel = "icon" href = "https://image.freepik.com/free-vector/contact-us-landing-page-template_52683-21942.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      .container {
+          background-image: none
+      }
+      body {
+        background-color: rgb(24, 216, 216);
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <img src="../images/frontimage.jpg" alt="childHood" width="100" height="60"/>
+    <h2>Dat Tran Official</h2>
+  </header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index.html">Tropical Fruits</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="../index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+        <h2>Contact Us</h2>
+				<h4>We would love to hear from you!</h4>
+			</div>
+		</div>
+    <form action="mailto:dat.tran@tcs.com" method="post" enctype="text/plain">
+    Name: <input type="text" name="My Name " placeholder="Enter Your Name..."><br>
+    E-mail: <input type="text" name="My Email " placeholder="Enter Your Email..."><br><br>
+    Message:<br> <textarea name="Message " rows="10" cols="30" placeholder="Enter Message...."></textarea><br>
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset">
+    </form>
+	</div>
+</div>
+</body>
+</html>
