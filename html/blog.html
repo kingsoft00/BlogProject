@@ -10,21 +10,61 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+    * {
+      box-sizing: border-box;
+    }   
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {   
+      float: left;
+      width: 75%;
     }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      padding-left: 20px;
+    }
+    
+    /* Fake image */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+    }
+    
+    /* Add a card effect for articles */
+    .card {
+       background-color: white;
+       padding: 20px;
+       margin-top: 20px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
       }
     }
-  </style>
+    h2 a:link, span a:link, div a:link {
+      text-decoration: none;
+    }
+
+    h2 a:visited, span a:visited, div a:visited {
+      text-decoration: none;
+      }
+    span a {
+      color: black;
+    }
+    </style>
 </head>
 <body>
   <header>
@@ -46,45 +86,36 @@
     </ul>
   </div>
 </nav>
-<div class="jumbotron p-8 p-md-5 text-white rounded bg-dark">
-  <div class="col-md-6 px-0">
-    <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-    <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2><a href="post1.html">Florida Citrus Mutual Triangle Column</a></h2>
+      <h5>By Ned Hancock | <span>Oct 27, 2020</span></h5>
+      <div class="fakeimg" style="height:200px;"><img src="../images/post1.png" alt="Orange Sticker" width="100%" height="100%"></div>
+      <p style="text-align: left;"><tab1></tab1>During the May meeting of the Florida Citrus Commission, there was a discussion regarding whether now is<br>
+        the time to place a larger emphasis on Not-From-Concentrate (NFC) orange juice in our marketing campaigns.<br>
+        To be certain, promoting NFC promotes Florida growers. In fact, 80 percent of...
+        <span><a href="post1.html">Continue reading</a><span></p>
+    </div>
+    <div class="card">
+      <h2><a href="post2.html">June forecast includes changes in orange and grapefruit crop production</a></h2>
+      <h5><span>Oct 27, 2020</span></h5>
+      <div class="fakeimg" style="height:200px;"><img src="../images/post2.jpg" alt="Orange Sticker" width="100%" height="100%"></div>
+      <p style="text-align: left;"><tab1></tab1><strong>BARTOW</strong> – The National Agricultural Statistics Service of the U.S. Department of Agriculture 
+        projected a decrease for Florida Orange and Grapefruit production, in an announcement Thursday.
+        The USDA predicted Florida Orange production at 67.65 million boxes, a 2 million box decrease over May’s forecast... 
+        <span><a href="post2.html">Continue reading</a><span></p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3 style="font-size: 40px; color:crimson"><b>Popular Post</b></h3>
+      <div class="fakeimg" style="font-size: 20px; text-align: center;"><img src="../images/post1.png" alt="Orange Sticker" width="100%"><a href="post1.html">Florida Citrus Mutual...</a></div><br>
+      <div class="fakeimg" style="font-size: 20px; text-align: center;"><img src="../images/post2.jpg" alt="Orange Sticker" width="120%"><a href="post2.html">June Forecast Includes...</a></div>
+    </div>
   </div>
 </div>
 
-<!-- <div class="row mb-2">
-  <div class="col-md-6">
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 text-primary">World</strong>
-        <h3 class="mb-0">Featured post</h3>
-        <div class="mb-1 text-muted">Nov 12</div>
-        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="stretched-link">Continue reading</a>
-      </div>
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 text-success">Design</strong>
-        <h3 class="mb-0">Post title</h3>
-        <div class="mb-1 text-muted">Nov 11</div>
-        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="stretched-link">Continue reading</a>
-      </div>
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-      </div>
-    </div>
-  </div>
-</div>
-</div> -->
     <footer><p>&copy;Copyright 2020 Dat Tran</p></footer>
     <script src="../myscript/myscript.js"></script>
 </body>
