@@ -66,3 +66,84 @@ function validateForm() {
         alert('You have submitted the form..')
     }
 }
+//add comment
+function newComment() { //important for blog project
+    var name = document.getElementById('commentName').value;
+    var inputValue = document.getElementById('myInput').value;
+    var text = document.createTextNode(inputValue);
+    var textName = document.createTextNode(name);
+    var li = document.createElement('li');
+    var outName = document.createElement('label');
+    outName.appendChild(textName);
+    li.appendChild(text);
+    if (inputValue.trim() === '') {
+        alert('you must write something...')
+        document.getElementById('myInput').value = '';
+    } else {
+        document.getElementById('myList').appendChild(outName);
+        document.getElementById('myList').appendChild(li);
+        document.getElementById('myInput').value = '';
+        document.getElementById('commentName').value = '';
+    }
+}
+
+function addPost() {
+    var inputName = document.getElementById('name').value;
+    var inputContent = document.getElementById('myInput').value;
+    var inputTitle =document.getElementById('title').value;
+    var inputday =document.getElementById('day').value;
+    
+    var title = document.createTextNode(inputTitle);
+    var content = document.createTextNode(inputContent);
+
+    var div = document.createElement('div');
+    var seconddiv = document.createElement('div');
+    seconddiv.className = 'fakeimg';
+    seconddiv.style.height = '200px';
+
+    var hr = document.createElement('hr');
+    div.className = 'card';
+    var h2 = document.createElement('h2');
+    var h5 = document.createElement('h5');
+    var p = document.createElement('p');
+
+    var oImg = document.createElement("img");
+    oImg.src = "https://image.shutterstock.com/image-illustration/new-post-sticker-video-blog-600w-1417843493.jpg";
+    oImg.setAttribute('alt', 'image');
+    oImg.setAttribute('height', '200');
+    oImg.setAttribute('width', '1122');
+    seconddiv.appendChild(oImg);
+
+    p.style.textAlign = 'left';
+    h5.textContent = `by ${inputName} | ${inputday}`;
+
+    p.appendChild(content);
+    h2.appendChild(title);
+    div.appendChild(hr);
+    div.appendChild(h2);
+    div.appendChild(h5);
+    div.appendChild(seconddiv);
+    div.appendChild(p);
+    if (inputTitle.trim() === '' || inputName.trim() === '' || inputContent.trim() === '') {
+        alert('you must write something...')
+    } 
+        else {
+        document.getElementById('postList').appendChild(div);
+        document.getElementById('myInput').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('title').value = '';
+        document.getElementById('day').value = '';
+    }
+}
+function show() {
+        document.getElementById("addForm").style.display="block";
+}
+function hide() {
+        document.getElementById("addForm").style.display="none";
+}
+function cancel() {
+    document.getElementById('myInput').value = '';
+    document.getElementById('name').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('day').value = '';
+}

@@ -64,6 +64,12 @@
     span a {
       color: black;
     }
+    hr {
+        border: 1px solid green;
+    }
+    .addp {
+      background-color: greenyellow;
+    }
     </style>
 </head>
 <body>
@@ -86,32 +92,43 @@
     </ul>
   </div>
 </nav>
+<button class="addp" onclick="show()">Add New Post</button>
+    <div class="myPlace" style="display: none;" id="addForm">
+        <input type="text" id="name" placeholder="Enter your name..."/><br>
+        <input type="text" id="title" placeholder="Enter title..."/><br>
+        <input type="date" id="day"/>
+        <textarea rows=10 cols="65" id="myInput" placeholder="Write content..."></textarea><br>
+        <button onclick="addPost(); hide()">Add Post</button>
+        <button onclick="hide();cancel()">Cancel</button>
+    </div>
 <div class="row">
-  <div class="leftcolumn">
+  <div class="leftcolumn" id="postList">
+    <hr>
     <div class="card">
       <h2><a href="post1.html">Florida Citrus Mutual Triangle Column</a></h2>
       <h5>By Ned Hancock | <span>Oct 27, 2020</span></h5>
-      <div class="fakeimg" style="height:200px;"><img src="../images/post1.png" alt="Orange Sticker" width="100%" height="100%"></div>
-      <p style="text-align: left;"><tab1></tab1>During the May meeting of the Florida Citrus Commission, there was a discussion regarding whether now is<br>
+      <div class="fakeimg" style="height:200px;"><img src="../images/post1.png" alt="Orange Sticker" width="1122" height="200"></div>
+      <p style="text-align: left;">&emsp;During the May meeting of the Florida Citrus Commission, there was a discussion regarding whether now is<br>
         the time to place a larger emphasis on Not-From-Concentrate (NFC) orange juice in our marketing campaigns.<br>
         To be certain, promoting NFC promotes Florida growers. In fact, 80 percent of...
-        <span><a href="post1.html">Continue reading</a><span></p>
+        <span><a href="post1.html">Continue reading</a></span></p>
     </div>
+    <hr>
     <div class="card">
       <h2><a href="post2.html">June forecast includes changes in orange and grapefruit crop production</a></h2>
       <h5><span>Oct 27, 2020</span></h5>
-      <div class="fakeimg" style="height:200px;"><img src="../images/post2.jpg" alt="Orange Sticker" width="100%" height="100%"></div>
-      <p style="text-align: left;"><tab1></tab1><strong>BARTOW</strong> – The National Agricultural Statistics Service of the U.S. Department of Agriculture 
+      <div class="fakeimg" style="height:200px;"><img src="../images/post2.jpg" alt="Orange Sticker" width="1122" height="200"></div>
+      <p style="text-align: left;">&emsp;<strong>BARTOW</strong> – The National Agricultural Statistics Service of the U.S. Department of Agriculture 
         projected a decrease for Florida Orange and Grapefruit production, in an announcement Thursday.
         The USDA predicted Florida Orange production at 67.65 million boxes, a 2 million box decrease over May’s forecast... 
-        <span><a href="post2.html">Continue reading</a><span></p>
+        <span><a href="post2.html">Continue reading</a></span></p>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
       <h3 style="font-size: 40px; color:crimson"><b>Popular Post</b></h3>
-      <div class="fakeimg" style="font-size: 20px; text-align: center;"><img src="../images/post1.png" alt="Orange Sticker" width="100%"><a href="post1.html">Florida Citrus Mutual...</a></div><br>
-      <div class="fakeimg" style="font-size: 20px; text-align: center;"><img src="../images/post2.jpg" alt="Orange Sticker" width="120%"><a href="post2.html">June Forecast Includes...</a></div>
+      <div class="fakeimg" style="font-size: 20px; text-align: center;"><img src="../images/post1.png" alt="Orange Sticker" width="327"><a href="post1.html">Florida Citrus Mutual...</a></div><br>
+      <div class="fakeimg" style="font-size: 20px; text-align: center;"><img src="../images/post2.jpg" alt="Orange Sticker" width="327"><a href="post2.html">June Forecast Includes...</a></div>
     </div>
   </div>
 </div>
